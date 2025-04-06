@@ -51,7 +51,9 @@ export default function ActivityCard({
                       : `https://${activity?.assets?.large_image
                           .split("/https/")
                           .pop()}`
-                    : `https://cdn.discordapp.com/app-assets/${activity?.application_id}/${activity?.assets?.large_image}.png`
+                    : activity?.application_id
+                    ? `https://cdn.discordapp.com/app-assets/${activity?.application_id}/${activity?.assets?.large_image}.png`
+                    : "https://i.pinimg.com/736x/c0/0f/07/c00f07cdae11db49e00f55b011ccc4f3.jpg"
                 }
                 onError={(e) => {
                   e.currentTarget.src =
