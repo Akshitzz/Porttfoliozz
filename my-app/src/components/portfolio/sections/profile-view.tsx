@@ -1,6 +1,7 @@
 import FlipSentence from "../ui/flip-sentence";
 import Image from "next/image";
 import pfp from "../../../../public/pfp.jpeg";
+import { BadgeCheck } from "lucide-react";
 export function ProfileView() {
     return (
         <div className=" flex w-full h-32 gap-2.5 mx-1 ">
@@ -24,9 +25,17 @@ export function ProfileView() {
             />
            </div>
             <div className="flex flex-col justify-end gap-3">
-                <div className="text-[12px] font-mono opacity-15 -mx-1.5">text-2xl text-zinc-300 font-medium</div>
+                <div className="text-[10px] font-mono opacity-15 -mx-1.5">text-2xl text-zinc-300 font-medium
+                </div>
                 <div className="gap-2 mb-2">
-                    <h2 className="text-xl font-bold -mt-2 -mx-1.5">Akshit Sachdeva</h2>
+                    <h2 className="text-xl font-bold -mt-2 -mx-1.5 inline-flex">Akshit Sachdeva
+                        <span className="mt-0.5 mx-1">         
+                            <BadgeCheck 
+                            className="w-6 h-6 fill-blue-500 text-white dark:text-black " 
+                            strokeWidth={1.5}
+                        />
+                        </span>
+                    </h2>
                     <FlipSentence />
                 </div>
             </div>
