@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { ProfileHeader } from "./profile-header";
 import { useState } from "react";
 import { ProfileView } from "./profile-view";
+import Stack from "./stack";
+import GitHubContributions from "./github-activity";
 
 function Home() {
   const projects = [
@@ -84,6 +86,8 @@ function Home() {
       >
         <ProfileHeader />
         <ProfileView />
+        <Stack/>
+        <GitHubContributions/>
       </motion.main>
     </>
   );
