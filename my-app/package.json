@@ -6,31 +6,41 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@microsoft/clarity": "^1.0.0",
+    "@theme-toggles/react": "^4.1.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.6.3",
     "hmm-api": "^1.1.31",
     "lucide-react": "^0.487.0",
-    "next": "15.2.4",
+    "motion": "^12.29.2",
+    "next": "^16.1.6",
     "next-themes": "^0.4.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-icons": "^5.5.0",
     "react-use-lanyard": "^0.3.2",
-    "tailwind-merge": "^3.1.0"
+    "tailwind-merge": "^3.4.0",
+    "tw-animate-css": "^1.4.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "19.2.10",
+    "@types/react-dom": "19.2.3",
     "eslint": "^9",
-    "eslint-config-next": "15.2.4",
+    "eslint-config-next": "^16.1.6",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@types/react": "19.2.10",
+    "@types/react-dom": "19.2.3",
+    "@theme-toggles/react": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }
