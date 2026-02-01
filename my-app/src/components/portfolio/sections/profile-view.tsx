@@ -7,7 +7,7 @@ export function ProfileView() {
         <div className=" flex w-full h-32 gap-2.5 mx-1 ">
 
 
-            <div className=" top-[-500px] left-1/2 w-px h-[12.5vh] translate-x-[132px] -translate-y-1 bg-gray-200 dark:bg-gray-800 -z-50" />
+            <div className=" top-[-500px] left-1/2 w-px h-[16vh] translate-x-[132px] -translate-y-1 bg-gray-200 dark:bg-gray-800 -z-50" />
 
             {/* Shorter horizontal line centered at your 140px offset */}
             <div className="absolute top-78.5 left-1/2 w-[403px] -translate-x-[140px] -translate-y-[32px] h-px bg-gray-200 dark:bg-gray-800 -z-50" />

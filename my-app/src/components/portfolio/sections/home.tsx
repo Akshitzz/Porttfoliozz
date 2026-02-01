@@ -7,31 +7,11 @@ import { useState } from "react";
 import { ProfileView } from "./profile-view";
 import Stack from "./stack";
 import GitHubContributions from "./github-activity";
+import Projects from "./projects";
+import Contact from "./about";
 
 function Home() {
-  const projects = [
-    {
-      id: "100XDates",
-      title: "100XDates",
-      description: "A Dating app for Developers and recruiters .Matchmaking on skills",
-    },
-    {
-      id: "Moder-Web",
-      title: "Modern-blog",
-      description: "A Modern blogging full-stack web-app for blogs",
-    },
-    {
-      id: "vibe",
-      title: "Genie-AI",
-      description: "SaaS for automatically generating slides by auto prompting",
-    },
-    {
-      id: "X-boost",
-      title: "X-boost",
-      description: "Auto-generation of Tweets to market founders product ",
-    },
-
-  ]
+ 
 
   const [transitionComplete] = useState(true);
 
@@ -86,8 +66,10 @@ function Home() {
       >
         <ProfileHeader />
         <ProfileView />
-        <Stack/>
         <GitHubContributions/>
+        <Stack/>
+        <Projects/>
+        <Contact/>
       </motion.main>
     </>
   );
