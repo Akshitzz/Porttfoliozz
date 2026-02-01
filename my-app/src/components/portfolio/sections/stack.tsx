@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const techStack = [
   { name: "HTML", icon: "html5", color: "#E34F26" },
-  { name: "CSS", icon: "css3", color: "#1572B6" },
+  { name: "CSS", icon: "css", color: "#1572B6" },
   { name: "React", icon: "react", color: "#61DAFB", adaptive: true },
   { name: "Next.js", icon: "nextdotjs", color: "#000000", adaptive: true },
   { name: "Supabase", icon: "supabase", color: "#3ECF8E" },
