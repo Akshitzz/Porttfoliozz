@@ -4,15 +4,18 @@ import pfp from "../../../../public/pfp.jpeg";
 import { BadgeCheck } from "lucide-react";
 export function ProfileView() {
     return (
-        <div className=" flex w-full h-32 gap-2.5 mx-1 ">
+        <div className=" flex w-full h-32 gap-2.5 pl-4 ">
 
 
-            <div className=" top-[-500px] left-1/2 w-px h-[16vh] translate-x-[132px] -translate-y-1 bg-gray-200 dark:bg-gray-800 -z-50" />
 
-            {/* Shorter horizontal line centered at your 140px offset */}
-            <div className="absolute top-78.5 left-1/2 w-[403px] -translate-x-[140px] -translate-y-[32px] h-px bg-gray-200 dark:bg-gray-800 -z-50" />
+            <div className="absolute top-47 left-1/2 w-px h-[126px] -translate-x-[130px] lg:-translate-x-[330px] bg-gray-200 dark:bg-gray-800 -z-50" />
 
-            <div className="absolute top-78.5 left-1/2 w-[403px] -translate-x-[140px] -translate-y-[60px] h-px bg-gray-200 dark:bg-gray-800 -z-50" />
+
+            <div className="absolute top-[47px] left-1/2 w-[393px] lg:w-[793px] -translate-x-[130px] lg:-translate-x-[330px] h-px bg-transparent -z-50" />
+
+            <div className="absolute top-78.5 left-1/2 w-[393px] lg:w-[793px] -translate-x-[130px] lg:-translate-x-[330px] -translate-y-[32px] h-px bg-gray-200 dark:bg-gray-800 -z-50" />
+
+            <div className="absolute top-78.5 left-1/2 w-[393px] lg:w-[793px] -translate-x-[130px] lg:-translate-x-[330px] -translate-y-[60px] h-px bg-gray-200 dark:bg-gray-800 -z-50" />
 
 
 
@@ -24,7 +27,7 @@ export function ProfileView() {
                     className=" -top-1 -right-1  absolute w-28 my-2 h-28 mx-2 object-cover rounded-full "
                 />
             </div>
-            <div className="flex flex-col justify-end gap-3">
+            <div className="flex flex-col justify-end gap-3 pl-3">
                 <div className="text-[10px] font-mono opacity-15 -mx-1.5">text-2xl text-zinc-300 font-medium
                 </div>
                 <div className="gap-2 mb-2">

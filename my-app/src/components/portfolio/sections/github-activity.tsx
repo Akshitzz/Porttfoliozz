@@ -25,29 +25,25 @@ export default function GitHubContributions() {
         <div className="absolute top-2 left-1/2 w-[300vw] -translate-x-1/2 h-px bg-gray-200 dark:bg-gray-800 -z-50" />
 
         {/* Vertical Lines - Now z-0 to sit on top of background but below content */}
-        <div className="absolute top-[-500px] left-1/2 w-px h-[200vh] -translate-x-[263px] bg-gray-200 dark:bg-gray-800 pointer-events-none -z-50" />
-        <div className="absolute top-[-500px] left-1/2 w-px h-[200vh] translate-x-[263px] bg-gray-200 dark:bg-gray-800 pointer-events-none -z-50" />
+        <div className="absolute top-0 left-1/2 w-px bottom-0 -translate-x-[263px] lg:-translate-x-[463px] bg-gray-200 dark:bg-gray-800 pointer-events-none -z-50" />
+        <div className="absolute top-0 left-1/2 w-px bottom-0 translate-x-[263px] lg:translate-x-[463px] bg-gray-200 dark:bg-gray-800 pointer-events-none -z-50" />
 
         {/* Diagonal Backgrounds for Side Gutters (Between top-18 here and top-2 of Stack) */}
-        <div className="absolute top-[74px] -bottom-3 right-1/2 translate-x-[-263px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
-        <div className="absolute top-[74px] -bottom-3 left-1/2 translate-x-[263px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
+        <div className="absolute top-[74px] -bottom-3 right-1/2 translate-x-[-263px] lg:translate-x-[-463px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
+        <div className="absolute top-[74px] -bottom-3 left-1/2 translate-x-[263px] lg:translate-x-[463px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
 
         <h1 className=" -mx-0.5 mt-6  text-4xl font-semibold tracking-tighter relative z-10 ">Contributions</h1>
 
         <div className="relative p-6">
-          {/* Detached Background Layer - z-10 puts it behind the lines? No, we need lines to be ON TOP of this background.
-             If lines are sibling to this container, and this container is relative...
-             Standard flow: Container background paints.
-             We need a specific background element. */}
+
           <div className="absolute inset-0  -z-10 " />
 
-          <div className="relative z-10 -mt-5 -mb-6">
+          <div className="relative z-10 -mt-5 -mb-6 [&::-webkit-scrollbar]:hidden scrollbar-hide">
             <GitHubCalendar
               username="Akshitzz"
               blockSize={12}
               blockMargin={4}
               fontSize={12}
-              // Customizing colors to match your dark/light theme
               theme={{
                 light: ['#e0e0e0', '#fbcfe8', '#f472b6', '#db2777', '#be185d'],
                 dark: ['#161b22', '#831843', '#be185d', '#db2777', '#f472b6'],

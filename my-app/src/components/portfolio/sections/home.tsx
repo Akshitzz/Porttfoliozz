@@ -11,7 +11,7 @@ import Projects from "./projects";
 import Contact from "./about";
 
 function Home() {
- 
+
 
   const [transitionComplete] = useState(true);
 
@@ -45,33 +45,33 @@ function Home() {
   };
 
   return (
-    <>
+    <div className="relative">
       {/* Horizontal Lines (Full Viewport Width) */}
       <div className="absolute top-9 left-1/2 w-[300vw] -translate-x-1/2 h-px bg-gray-200 dark:bg-gray-800 -z-50" />
       <div className="absolute top-47 left-1/2 w-[300vw] -translate-x-1/2 h-px bg-gray-200 dark:bg-gray-800 -z-50" />
 
       <div className="absolute top-78.5 left-1/2 w-[300vw] -translate-x-1/2 h-px bg-gray-200 dark:bg-gray-800 -z-50" />
       {/* Vertical Lines (Full Viewport Height) */}
-      <div className="absolute top-[-500px] left-1/2 w-px h-[200vh] -translate-x-[263px] bg-gray-200 dark:bg-gray-800 -z-50" />
-      <div className="absolute top-[-500px] left-1/2 w-px h-[200vh] translate-x-[263px] bg-gray-200 dark:bg-gray-800 -z-50" />
+      <div className="absolute top-9 left-1/2 w-px bottom-0 -translate-x-[263px] lg:-translate-x-[463px] bg-gray-200 dark:bg-gray-800 -z-50" />
+      <div className="absolute top-9 left-1/2 w-px bottom-0 translate-x-[263px] lg:translate-x-[463px] bg-gray-200 dark:bg-gray-800 -z-50" />
 
       {/* Diagonal Backgrounds for Empty Spaces (Side Gutters) */}
-      <div className="absolute top-9 right-1/2 translate-x-[-263px] w-[300vw] h-[9.5rem] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
-      <div className="absolute top-9 left-1/2 translate-x-[263px] w-[300vw] h-[9.5rem] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
+      <div className="absolute top-9 right-1/2 translate-x-[-263px] lg:translate-x-[-463px] w-[300vw] h-[9.5rem] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
+      <div className="absolute top-9 left-1/2 translate-x-[263px] lg:translate-x-[463px] w-[300vw] h-[9.5rem] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
       <motion.main
-        className="px-6 py-8 max-w-[600px] mx-auto  relative z-10 "
+        className="px-6 py-8 max-w-[600px] lg:max-w-[1000px] mx-auto  relative z-10 "
         variants={containerVariants}
         initial="hidden"
         animate={transitionComplete ? "visible" : "hidden"}
       >
         <ProfileHeader />
         <ProfileView />
-        <GitHubContributions/>
-        <Stack/>
-        <Projects/>
-        <Contact/>
+        <GitHubContributions />
+        <Stack />
+        <Projects />
+        <Contact />
       </motion.main>
-    </>
+    </div>
   );
 }
 

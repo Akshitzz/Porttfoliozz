@@ -36,15 +36,12 @@ export default function Projects() {
       <div className="absolute top-15 left-1/2 w-[300vw] -translate-x-1/2 h-px bg-gray-200 dark:bg-gray-800 -z-50" />
       <div className="absolute top-1 left-1/2 w-[300vw] -translate-x-1/2 h-px bg-gray-200 dark:bg-gray-800 -z-50" />
 
-      <div className="absolute top-[-500px] left-1/2 w-px h-[200vh] -translate-x-[263px] bg-gray-200 dark:bg-gray-800 -z-50" />
-      <div className="absolute top-[-500px] left-1/2 w-px h-[200vh] translate-x-[263px] bg-gray-200 dark:bg-gray-800 -z-50" />
+      <div className="absolute top-0 left-1/2 w-px bottom-0 -translate-x-[263px] lg:-translate-x-[463px] bg-gray-200 dark:bg-gray-800 -z-50" />
+      <div className="absolute top-0 left-1/2 w-px bottom-0 translate-x-[263px] lg:translate-x-[463px] bg-gray-200 dark:bg-gray-800 -z-50" />
 
-      {/* Diagonal Backgrounds for Side Gutters (Projects -> Contact) 
-          Horizontal line is at top-15 (60px). 
-          Starting diagonal at approx top-[62px] to be just below it.
-      */}
-      <div className="absolute top-[62px] -bottom-6 right-1/2 translate-x-[-263px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
-      <div className="absolute top-[62px] -bottom-6 left-1/2 translate-x-[263px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
+
+      <div className="absolute top-[62px] -bottom-6 right-1/2 translate-x-[-263px] lg:translate-x-[-463px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
+      <div className="absolute top-[62px] -bottom-6 left-1/2 translate-x-[263px] lg:translate-x-[463px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
       <h1 className="text-4xl font-semibold tracking-tighter">
         Projects
         <span className="ml-2 align-super text-sm text-gray-200/50 font-mono">

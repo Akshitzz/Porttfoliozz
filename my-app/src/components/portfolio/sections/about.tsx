@@ -41,26 +41,23 @@ export default function Contact() {
   ];
 
   return (
-    <div className="relative p-4.5 mx-2 flex flex-col gap-12 pb-20">
+    <div className="relative p-4.5 mx-2 flex flex-col gap-12">
 
       {/* Horizontal Separators (Full Viewport) */}
       <div className="absolute top-20 left-1/2 w-[300vw] -translate-x-1/2 h-px bg-gray-200 dark:bg-gray-800 -z-50" />
       <div className="absolute top-2 left-1/2 w-[300vw] -translate-x-1/2 h-px bg-gray-200 dark:bg-gray-800 -z-50" />
 
       {/* Vertical Separators (Full Viewport Height) */}
-      <div className="absolute top-[-500px] -bottom-8 left-1/2 w-px -translate-x-[263px] bg-gray-200 dark:bg-gray-800 -z-50" />
-      <div className="absolute top-[-500px] -bottom-8 left-1/2 w-px translate-x-[263px] bg-gray-200 dark:bg-gray-800 -z-50" />
+      <div className="absolute top-0 -bottom-8 left-1/2 w-px -translate-x-[263px] lg:-translate-x-[463px] bg-gray-200 dark:bg-gray-800 -z-50" />
+      <div className="absolute top-0 -bottom-8 left-1/2 w-px translate-x-[263px] lg:translate-x-[463px] bg-gray-200 dark:bg-gray-800 -z-50" />
 
-      {/* Diagonal Backgrounds for Side Gutters (Contact -> Page End) 
-          Horizontal line is at top-20 (80px). 
-          Starting diagonal at approx top-[82px] to be just below it.
-      */}
-      <div className="absolute top-[82px] -bottom-8 right-1/2 translate-x-[-263px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
-      <div className="absolute top-[82px] -bottom-8 left-1/2 translate-x-[263px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
+
+      <div className="absolute top-[82px] -bottom-8 right-1/2 translate-x-[-263px] lg:translate-x-[-463px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
+      <div className="absolute top-[82px] -bottom-8 left-1/2 translate-x-[263px] lg:translate-x-[463px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
 
       <h1 className="-mx-1.5 text-4xl font-semibold tracking-tighter pt-3">Hit me up!</h1>
 
-      <div className="relative left-1/2 -translate-x-1/2 w-[526px] max-w-[90vw] grid grid-cols-2 md:grid-cols-3">
+      <div className="relative left-1/2 -translate-x-1/2 w-[526px] lg:w-[926px] max-w-[90vw] grid grid-cols-2 md:grid-cols-3">
         {socialLinks.map((link) => (
           <a
             key={link.name}

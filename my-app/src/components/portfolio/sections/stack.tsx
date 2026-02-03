@@ -32,15 +32,12 @@ export default function Stack() {
       <div className="absolute top-14 left-1/2 w-[300vw] -translate-x-1/2 h-px bg-gray-200 dark:bg-gray-800 -z-50" />
       <div className="absolute top-2 left-1/2 w-[300vw] -translate-x-1/2 h-px bg-gray-200 dark:bg-gray-800 -z-50" />
 
-      <div className="absolute top-[-500px] left-1/2 w-px h-[200vh] -translate-x-[263px] bg-gray-200 dark:bg-gray-800 -z-50" />
-      <div className="absolute top-[-500px] left-1/2 w-px h-[200vh] translate-x-[263px] bg-gray-200 dark:bg-gray-800 -z-50" />
+      <div className="absolute top-0 left-1/2 w-px bottom-0 -translate-x-[263px] lg:-translate-x-[463px] bg-gray-200 dark:bg-gray-800 -z-50" />
+      <div className="absolute top-0 left-1/2 w-px bottom-0 translate-x-[263px] lg:translate-x-[463px] bg-gray-200 dark:bg-gray-800 -z-50" />
 
-      {/* Diagonal Backgrounds for Side Gutters (Stack -> Projects) 
-          Horizontal line is at top-14 (56px). 
-          Starting diagonal at approx top-[58px] to be just below it.
-      */}
-      <div className="absolute top-[58px] -bottom-5 right-1/2 translate-x-[-263px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
-      <div className="absolute top-[58px] -bottom-5 left-1/2 translate-x-[263px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
+
+      <div className="absolute top-[58px] -bottom-5 right-1/2 translate-x-[-263px] lg:translate-x-[-463px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
+      <div className="absolute top-[58px] -bottom-5 left-1/2 translate-x-[263px] lg:translate-x-[463px] w-[300vw] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none -z-50" />
       <h1 className="text-4xl font-semibold tracking-tighter">Stack</h1>
 
       <div className="flex flex-row flex-wrap gap-6">
@@ -51,7 +48,6 @@ export default function Stack() {
             onMouseLeave={() => setHoveredTech(null)}
             className="group relative flex flex-col items-center"
           >
-            {/* The KBD Message - Now positioned absolutely per icon */}
             <AnimatePresence>
               {hoveredTech === tech.name && (
                 <motion.div
@@ -67,7 +63,6 @@ export default function Stack() {
               )}
             </AnimatePresence>
 
-            {/* The Icon */}
             <motion.img
               whileHover={{ scale: 1.2, rotate: 5 }}
               src={`https://cdn.simpleicons.org/${tech.icon}/${(tech.adaptive ? "#000000" : tech.color).replace('#', '')}`}
@@ -75,7 +70,6 @@ export default function Stack() {
               className={`h-8 w-8 transition-all ${tech.adaptive ? 'dark:invert' : ''}`}
             />
 
-            {/* Background Glow */}
             <div
               className="absolute inset-0 -z-10 blur-xl opacity-0 transition-opacity group-hover:opacity-30"
               style={{ backgroundColor: tech.color }}

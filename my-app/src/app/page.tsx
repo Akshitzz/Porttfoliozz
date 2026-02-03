@@ -1,9 +1,5 @@
-import Home from "@/components/portfolio/sections/home";
+import { redirect } from "next/navigation";
 
-
-export default async function Page() {
-  return <div className="relative z-0">
-
-    <Home />
-  </div>
+export default function Page() {
+  redirect("/portfolio");
 }
