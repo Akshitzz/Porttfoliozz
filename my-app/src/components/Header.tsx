@@ -20,12 +20,12 @@ export default function Header() {
   };
 
   return (
-    <div className="relative z-50 p-6 w-full ">
+    <div className="relative z-50 p-6 w-full min-h-[100px]">
       {/* Horizontal Lines */}
       <div className="absolute top-20 left-0 h-px w-full bg-gray-200 dark:bg-gray-800" />
       <div className="absolute top-2 left-0 h-px w-full bg-gray-200 dark:bg-gray-800" />
       <div className="absolute top-2 left-0 w-full h-[4.5rem] diagonal-bg opacity-50 dark:opacity-20 pointer-events-none z-10" />
-      <header className=" z-20 flex justify-between sticky top-4 items-center p-2 px-6 border border-gray-200 dark:border-gray-800 rounded-full bg-white dark:bg-[#0a0a0a] max-w-[600px] mx-auto transition-all duration-500 ease-in-out">
+      <header className=" z-[100] flex justify-between fixed top-6 left-1/2 -translate-x-1/2 w-[90%] md:w-full items-center p-2 px-6 border border-gray-200 dark:border-gray-800 rounded-full bg-white dark:bg-[#0a0a0a] max-w-[600px] lg:max-w-[1000px] transition-all duration-500 ease-in-out">
         <nav className="flex gap-5 w-full justify-end items-center">
           <ul className="flex gap-6">
             <li>
